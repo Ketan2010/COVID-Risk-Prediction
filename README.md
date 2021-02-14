@@ -3,13 +3,12 @@ This project is use to predict COVID-19 Risk on the basis of available data of I
 
 ## Demo
 This project is deployed on heroku.
-predictor-covid.herokuapp.com/
+[click here to view](https://predictor-covid.herokuapp.com/)
 
 ## How to use
 ```
 $ git clone https://github.com/Ketan2010/COVID-Risk-Prediction.git
-$ mv COVID-Risk-Prediction covid
-$ cd covid
+$ cd COVID-Risk-Prediction 
 $ pip install -r requirements.txt
 $ app.py
 ```
@@ -30,5 +29,5 @@ $ app.py
 ```
 
 ## Technology Stack
-* python3 with libraries: Flask, numpy, scikit-learn, pandas
+* python3 with Flask, numpy, scikit-learn, pandas
 * for frontend: HTML, CSS
