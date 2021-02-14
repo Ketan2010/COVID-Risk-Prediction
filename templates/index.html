@@ -25,19 +25,20 @@
       <div class="card shadow-lg p-6 mb-8 " style="width: 50rem;">
         <img class="card-img-top" src="/static/head.jpg" alt="Card image cap">	
         <div class="card-body">
-          
+          {% if name %}
           <div style = "border-radius: 25px; border: 2px solid black;" class="result shadow-lg p-6 mb-8" align="center">
             {% if name %}
             <p style="padding: 0.5%"><b> Hello, {{ name }}!</b></p>
             {% endif %}	
             {% if prediction_nb %}
-              <p style="padding: 0.5%"><b> Using Naive Bayes, COVID-19 Risk: {{ prediction_nb }}, With {{ accuracy_nb }} accuracy.</b></p>
+              <p style="padding: 0.5%"><b> Using Naive Bayes aglorithm, COVID-19 Risk is {{ prediction_nb }}, With {{ accuracy_nb }} accuracy.</b></p>
             {% endif %}	
 
             {% if prediction_dt %}
-              <p style="padding: 0.5%"><b> Using Decision Tree, COVID-19 Risk: {{ prediction_dt }}, With {{ accuracy_dt }} accuracy.</b></p>
+              <p style="padding: 0.5%"><b> Using Decision Tree algorithm, COVID-19 Risk is {{ prediction_dt }}, With {{ accuracy_dt }} accuracy.</b></p>
             {% endif %}	
           </div>
+          {% endif %}
           <br>
           <form action="{{ url_for('predict')}}" method="post" >
               <div class="form-group">
@@ -50,10 +51,10 @@
                   <label for="age">Age:</label>
                   <select id="age" name = "age" class="form-control" required>
                     <option >Select...</option>
-                    <option value="1" >Child</option>
-                    <option value="0">Youth</option>
-                    <option value="0">Adult</option>
-                    <option value="0">Senior</option>
+                    <option value="1" >Child (1 to 14)</option>
+                    <option value="0">Youth (15 to 35)</option>
+                    <option value="0">Adult (36 to 55)</option>
+                    <option value="0">Senior (55 and greater)</option>
                   </select>
                 </div>
                 <div class="form-group col-md-6">
