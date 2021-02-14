@@ -9,7 +9,7 @@ l1=['O-blood-group','child-adult','medical-complication','international-travel',
 disease=['Very-high','Pretty-High','High','Pretty-low','low']
 
 # TESTING DATA df -------------------------------------------------------------------------------------
-df=pd.read_csv("test.csv")
+df=pd.read_csv("dataset/test.csv")
 
 df.replace({'prognosis':{'Very-high':0,'Pretty-High':1,'High':2,'Pretty-low':3,'low':4}},inplace=True)
 
@@ -23,7 +23,7 @@ np.ravel(y)
 # print(y)
 
 # TRAINING DATA tr --------------------------------------------------------------------------------
-tr=pd.read_csv("train.csv")
+tr=pd.read_csv("dataset/train.csv")
 tr.replace({'prognosis':{'Very-high':0,'Pretty-High':1,'High':2,'Pretty-low':3,'low':4}},inplace=True)
 
 X_test= tr[l1]
