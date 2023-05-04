@@ -9,6 +9,8 @@ This project is deployed on heroku.
 ```
 $ git clone https://github.com/Ketan2010/COVID-Risk-Prediction.git
 $ cd COVID-Risk-Prediction 
+$ virtualenv flask
+$ Scripts\activate
 $ pip install -r requirements.txt
 $ app.py
 ```
